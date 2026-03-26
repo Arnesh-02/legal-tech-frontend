@@ -17,7 +17,7 @@ import Login from "./pages/login";
 import Register from "./pages/register";
 import Dashboard from "./pages/dashboard";
 import Profile from "./pages/profile";
-import DocumentHistory from "./pages/document-History";
+import DocumentHistory from "./pages/document-history";
 import FoundersPage from "./pages/founders-page";
 import RiskAnalysisPage from "./pages/risk-analysis-page";
 import AdvocatesPage from "./pages/advocates-page";

@@ -48,30 +48,34 @@ const RiskAnalysisPage = () => {
 
   // 🚀 Run Risk Analysis
   const handleRiskAnalysis = async () => {
-    if (!file) {
-      setErrorMsg("Please upload a document first.");
-      return;
-    }
+  if (!file) {
+    setErrorMsg("Please upload a document first.");
+    return;
+  }
 
-    setIsAnalyzing(true);
+  setIsAnalyzing(true);
 
-    const formData = new FormData();
-    formData.append("file", file);
+  const formData = new FormData();
+  formData.append("file", file);
 
-    try {
-      const response = await fetch("http://127.0.0.1:5000/risk-analysis", {
-        method: "POST",
-        body: formData,
-      });
+  try {
+    const API_URL = import.meta.env.VITE_API_URL;
 
-      const result = await response.json();
+    const response = await fetch(`${API_URL}/risk-analysis`, {
+      method: "POST",
+      body: formData,
+      credentials: "include"
+    });
 
-      setIsAnalyzing(false);
-      navigate("/risk-report", { state: { analysis: result } });
-    } catch (err) {
-      setIsAnalyzing(false);
-      setErrorMsg("Something went wrong. Try again.");
-    }
+    const result = await response.json();
+
+    setIsAnalyzing(false);
+    navigate("/risk-report", { state: { analysis: result } });
+
+  } catch (err) {
+    setIsAnalyzing(false);
+    setErrorMsg("Something went wrong. Try again.");
+  }
   };
 
   return (

@@ -186,14 +186,16 @@ function FoundersPage() {
   const handleDownloadPDF = async () => {
     setIsDownloading(true);
     try {
-      const response = await fetch("http://localhost:5000/generate", {
-      method: "POST",
-      credentials: "include",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        document_type: "founders",
-        context: formData
-      })
+      const API_BASE = import.meta.env.VITE_API_URL;
+      
+      const response = await fetch(`${API_BASE}/generate`, {
+        method: "POST",
+        credentials: "include",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          document_type: "founders",
+          context: formData
+        })
       });
 
 

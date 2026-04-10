@@ -1,0 +1,74 @@
+/* Container for the AI section */
+.redrafted-preview-section {
+  margin-top: 50px;
+  width: 100%;
+}
+
+.preview-divider {
+  border: 0;
+  border-top: 1px solid #e2e8f0;
+  margin-bottom: 30px;
+}
+
+.preview-title {
+  color: #0d9488;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* The desk background for the paper */
+.paper-container {
+  background-color: #f1f5f9;
+  padding: 40px 20px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: center;
+  max-height: 700px;
+  overflow-y: auto;
+}
+
+/* The actual document page */
+.redrafted-document {
+  background: white;
+  width: 100%;
+  max-width: 800px; /* Standard A4 ratio feel */
+  min-height: 500px;
+  padding: 60px 80px; /* Professional legal margins */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid #cbd5e1;
+  text-align: left;
+  font-family: 'Inter', serif;
+  line-height: 1.7;
+  color: #1e293b;
+}
+
+.btn-download-final {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 30px auto 0;
+  padding: 14px 28px;
+  background-color: #115e59;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.btn-download-final:hover {
+  background-color: #134e4a;
+  transform: translateY(-2px);
+}
+
+.loader-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+  color: #0d9488;
+  font-weight: 600;
+}

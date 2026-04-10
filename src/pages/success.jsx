@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader"; 
 import { CheckCircle, ArrowRight, Download, RefreshCw } from "lucide-react";
-import "./Success.css"; // Ensure you create this CSS file
+import "./success.css"; // Ensure you create this CSS file
 
 function Success() {
   const location = useLocation();

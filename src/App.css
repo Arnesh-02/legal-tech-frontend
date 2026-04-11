@@ -1,60 +1,28 @@
 /* app.css - Global Styles for LegalTech Platform */
 
-/* legaltech-vars.css
-   Add this to your global stylesheet (e.g. index.css or App.css).
-   These CSS variables drive every component in the design system.
-*/
-
 :root {
-  --nt-bg:           #ffffff;
-  --nt-bg2:          #f6f6f4;
-  --nt-text:         #1a1a18;
-  --nt-muted:        #6b6b67;
-  --nt-border:       rgba(0, 0, 0, 0.10);
-  --nt-border-strong: rgba(0, 0, 0, 0.22);
-  --nt-green:        #1D9E75;
-  --nt-green-light:  #E1F5EE;
-  --nt-green-mid:    #9FE1CB;
-  --nt-green-dark:   #0F6E56;
-  --nt-green-deeper: #085041;
+  /* Primary Brand Colors */
+  --primary-navy: #001f3f; /* Deep Navy Blue for professionalism */
+  --secondary-teal: #007c89; /* A strong teal for contrast and trust */
+  --accent-blue: #0d6efd; /* Bootstrap primary blue, used as a key accent */
+  --light-bg: #f5f7fa; /* Light background for pages/panels */
+  --white: #ffffff;
+
+  /* Typography */
+  --font-sans: 'Inter', 'Roboto', Arial, sans-serif;
+  --font-serif: 'Times New Roman', Times, serif;
+
+  /* Shadows and Borders */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --nt-bg:           #111110;
-    --nt-bg2:          #1a1a18;
-    --nt-text:         #e8e8e2;
-    --nt-muted:        #888880;
-    --nt-border:       rgba(255, 255, 255, 0.10);
-    --nt-border-strong: rgba(255, 255, 255, 0.22);
-    --nt-green:        #1D9E75;
-    --nt-green-light:  #0a2d22;
-    --nt-green-mid:    #0F6E56;
-    --nt-green-dark:   #5DCAA5;
-    --nt-green-deeper: #9FE1CB;
-  }
-}
-
-/* Base resets */
-*, *::before, *::after { box-sizing: border-box; }
 body {
-  margin: 0;
-  background: var(--nt-bg);
-  color: var(--nt-text);
+  font-family: var(--font-sans);
+  background-color: var(--light-bg);
+  color: #333;
 }
-
-/* Footer link hover (can't do :hover in inline React styles) */
-.nt-foot-link:hover { color: var(--nt-text) !important; }
-
-/* Nav link active */
-.nt-nav-link-active {
-  background: var(--nt-bg2) !important;
-  color: var(--nt-text) !important;
-}
-
-/* Button hover helpers */
-.nt-btn-primary:hover { opacity: 0.88; }
-.nt-btn-ghost:hover { background: var(--nt-bg2) !important; }
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--primary-navy);
